@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link {% if home %}active{% endif %}">Home</a></li>
+            {% if not login %}
+            <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %}active{% endif %}">Login</a></li>
+            {% else %}
+            <li class="nav-item"><a href="{{ url_for('logout') }}" class="nav-link {% if login %}active{% endif %}">Logout</a></li>
+            {% endif %}
+
+        </ul>
+    </nav>
+    <hr style="clear:both">
+</header>
